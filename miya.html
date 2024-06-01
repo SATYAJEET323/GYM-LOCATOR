@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIN</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0; 
+            background-image: url(img5.png);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .bg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: whitesmoke;
+            font-size: 50px;
+            text-align: center;
+        }
+        .ubtn{
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: yellow;
+            color: black;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            height: 50px;
+            width:auto;
+            font:20px;
+            font-style: bold;
+        }
+        .ubtn a{
+            color :black;
+        text-underline-offset: -100px;
+        }
+        .gbtn {
+            margin:10px;
+            padding: 0px , 0px;
+            background-color: cyan;
+            color: black;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            height: 70px;
+            width:auto;
+            font:10px;
+            font-style: bold;
+
+        }
+        .gbtn a {
+            color :white;
+            text-underline-offset:100px;
+            
+        }
+        .tbtn{
+            top:10%;
+            padding: 10px 20px;
+            background-color: cyan;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 50px;
+            width:100px;
+            font:20px;
+            font-style: bold;
+        }
+        h2{
+            color :rgb(171, 255, 15);
+        
+                        
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .bg {
+                font-size: 40px;
+            }
+            .ubtn .button {
+                padding: 8px 16px;
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .bg {
+                font-size: 30px;
+            }
+            .btn .button1 {
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main_pg">
+        <div class="bg">
+            <div class="txt_pg">
+                <h1>Who Are You?</h1>
+                <div class="ubtn">
+                    <a href= "pass.html" class="button">USER</a>
+                </div>
+                <h2>OR</h2>
+                <div class="gbtn">
+                    <a href= "gymregistration.html" class="button1">GYM MANAGER</a>
+                </div>
+               <!--- <div class="tbtn">
+                    <button>TRAINER</button>
+                </div>
+            -->
+            </div>   
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img10.png'); /* Preserve the background image */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background color */
+    color: white; /* Font color */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    height: 500px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #eee; /* Heading font color */
+}
+
+label {
+    display: block;
+    text-align: left;
+    color: #ccc; /* Label font color */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #666; /* Input border color */
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #333; /* Input background color */
+    color: white; /* Input font color */
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #00bcd4; /* Cyan color */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0097a7; /* Darker cyan color on hover */
+}
+
+
+  

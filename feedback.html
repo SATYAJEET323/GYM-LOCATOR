@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("darkgym.jpg"); /* Add your image URL here */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            background-color: cyan;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            transition: background-color 0.3s ease;
+        }
+
+        th {
+            background-color: #555;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fff; 
+        }
+
+        tr:nth-child(odd) {
+            background-color: #000; 
+            color: #fff; 
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        textarea {
+            width: calc(100% - 18px);
+            height: 100px;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+        }
+
+       
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gym Feedback Form</h1>
+    </header>
+
+    <main>
+        <!-- <form id="feedbackForm" action="#" method="post" onsubmit="handleSubmit(event)"> -->
+            <form id="feedbackForm" action="process_feedback.php" onsubmit="handelSubmit(event)"  method="post">
+
+            <table>
+                <tr>
+                    <th>Rating</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="rating" value="excellent"> Excellent</td>
+                    <td>Outstanding experience, exceeded expectations.</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="rating" value="good"> Good</td>
+                    <td>Satisfactory experience, met expectations.</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="rating" value="better"> Better</td>
+                    <td>Room for improvement, but overall positive.</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="rating" value="poor"> Poor</td>
+                    <td>Unsatisfactory experience, needs improvement.</td>
+                </tr>
+            </table>
+
+            <label for="feedback">Describe in brief:</label>
+            <textarea id="feedback" name="feedback" placeholder="Provide your feedback..."></textarea>
+
+            <input type="submit"  value="Submit">
+        </form>
+    </main>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); 
+
+
+            alert("Form submitted successfully!");
+
+            
+        }
+    </script>
+</body>
+</html>

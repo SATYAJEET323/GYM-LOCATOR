@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.error-message {
+  color: #D8000C;
+  background-color: #FFBABA;
+  border: 1px solid #D8000C;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float:right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  position: relative;
+  width: 600px;
+  height: 550px;
+  border: 2px solid rgba(255, 255, 2550.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  padding: 0 20px 0 20px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  color: aqua;
+  font-size: 18px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+body {
+    background: url("img6.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+
+<h2 style="color:gold;font-size: 35px;"><center>Your Gym Info</center></h2>
+
+<div class="container">
+  <form id="gymForm" enctype="multipart/form-data">
+    <div class="row">
+      <div class="col-25">
+        <label for="gymName">Gym Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="gymName" name="gymName" placeholder="Gym Name">
+        <span class="error-message" id="gymNameError"></span> <!-- Error message placeholder -->
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="gymLocation">Location</label>
+      </div>
+      <div class="col-75">
+        <select id="gymLocation" name="gymLocation">
+          <option value="Nerul">Nerul</option>
+          <option value="Seawoods">Seawoods</option>
+          <option value="Belapur">Belapur</option>
+          <option value="Kharghar">Kharghar</option>
+          <option value="Mansarovar">Mansarovar</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="gymAddress">Address</label>
+      </div>
+      <div class="col-75">
+        <textarea id="gymAddress" name="gymAddress" placeholder="Enter detailed Addresss" style="height:75px"></textarea>
+        <span class="error-message" id="gymAddressError"></span> <!-- Error message placeholder -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="gymPrice">Price</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="gymPrice" name="gymPrice" placeholder="Enter Price of your gym">
+        <span class="error-message" id="gymPriceError"></span> <!-- Error message placeholder -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="gymContactNumber">Gym Contact</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="gymContactNumber" name="gymContactNumber" placeholder="Enter Gym Contact Number">
+        <span class="error-message" id="gymContactNumberError"></span> <!-- Error message placeholder -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="gymInfo">Info</label>
+      </div>
+      <div class="col-75">
+        <textarea id="gymInfo" name="gymInfo" placeholder="Enter detailed Information of your gym" style="height:75px"></textarea>
+        <span class="error-message" id="gymInfoError"></span> <!-- Error message placeholder -->
+      </div>
+    </div>
+
+    <!-- Input field for image upload -->
+    <div class="row">
+      <div class="col-25">
+        <label for="gymImage">Gym Image</label>
+      </div>
+      <div class="col-75">
+        <input type="file" id="gymImage" name="gymImage">
+      </div>
+    </div>
+
+    <div class="row">
+      <input type="button" value="Submit" onclick="saveGym()">
+      <input type="button" value="Next" onclick="redirectToNextPage()">
+
+    </div>
+  </form>
+</div>
+
+<script src="script1.js"></script>
+<script>
+  function redirectToNextPage() {
+      window.location.href = "lastpg.html";
+  }
+</script>
+
+</body>
+</html>

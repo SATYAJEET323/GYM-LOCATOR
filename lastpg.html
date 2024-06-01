@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="thanks.css">
+    <title>Thank You</title>
+</head>
+<body>
+    <div>
+        <h1>THANK YOU FOR YOUR VALUABLE TIME</h1>
+        <form id="logoutForm" action="gymlanding.html" method="post">
+            <input type="submit" value="Logout">
+        </form>
+    </div>
+    <script>
+        document.getElementById("logoutForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            window.location.href = "index.html"; // Redirect to gymlanding.html
+        });
+    </script>
+</body>
+</html>
