@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>FitHub - Your Fitness Destination</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        text-align: center;
+        background-color: black;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        z-index: -2;
+    }
+
+    .navbar {
+        height: 60px;
+        margin-inline: auto;
+        padding-inline: 30px;
+        background-image: linear-gradient(to bottom, #171A26, rgba(23, 26, 38, 0.0001));
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        align-items: center;
+        color: #ffffff;
+    }
+
+    .logo img {
+        margin-top: 10px;
+        width: 150px;
+        height: auto;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .options nav {
+        display: flex;
+        color: white;
+    }
+
+    .navbar nav a {
+        margin-inline: 15px;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .navbar nav a:hover {
+        border-bottom: 2px solid rgb(255, 0, 0);
+        border-radius: 5px;
+    }
+
+    .background-video {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Adjust as needed */
+        overflow: hidden;
+        opacity: 80%;
+    }
+
+    .background-video video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110%;
+        object-fit: cover;
+        animation: loopVideo 10s linear infinite;
+        z-index: -1;
+    }
+
+    p {
+        position: absolute;
+        font-style: oblique;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 25px;
+        font-weight: bold;
+        width: 80%;
+    }
+
+    h2 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        animation: fadeInUp 5s ease-out;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        font-size: 48px;
+    }   
+
+   
+
+    .button1 {
+        cursor: pointer;
+        font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+        border: 1px solid transparent;
+        justify-content: center;
+        background: white;
+        font-size: 14px;
+        line-height: 14px;
+        border-radius: 5px;
+        padding: 11.5px 20px;
+        font-weight: 700;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: orangered;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        .logo img {
+            width: 120px;
+        }
+
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-inline: 0;
+        }
+
+        .navbar nav {
+            margin-top: 10px;
+            margin-left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar nav a {
+            margin-inline: 10px;
+            font-size: 16px;
+            padding: 8px;
+        }
+
+        h2 {
+            font-size: 32px;
+            top: 20%;
+        }
+
+        p {
+            font-size: 18px;
+            top: 50%;
+        }
+
+        .button1 {
+            bottom: 5%;
+        }
+    }
+</style>
+
+<body>
+<div class="background-video">
+    <video autoplay muted loop>
+        <source src="gym.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Navbar starts here -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="logo">
+            </div>
+            <!-- Navbar Options to click -->
+            <div class="options">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="mzp1.html">About</a>
+                    <a href="contact us.html">Contact</a>
+                    <a href="#community">Commmunity</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar ends here -->
+</div>
+
+<h2>WELCOME THE FIT CLUB</h2>
+<p>Tired of lost workout logs and inconsistent progress?<br> Say goodbye to the struggle and hello to <br> THE FIT CLUB,<br> your personalized gym tracking website designed to empower your fitness journey.</p>
+<section>
+    <!--Explore Our Gym -->
+    <a href="miya.html" class="button1">GET STARTED</a>
+</section>
+
+<footer>
+    <div class="footer">&copy; 2024 THE FIT CLUB - Your Fitness Destination</div>
+</footer>
+
+</body>
+</html>

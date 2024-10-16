@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM SELECTION</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+     * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('allbg.png');
+            background-size: cover;
+            font-family: 'Georgia', serif;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .logo img {
+            margin: 20px 0;
+            width: 200px;
+            height: auto;
+            filter: drop-shadow(0 0 9px rgba(255, 255, 255, 0.7));
+        }
+
+        .box {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        ul li a {
+            margin: 0 20px;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .slctcity select {
+            width: 400px;
+            height: 60px;
+            font-size: 20px;
+            color: cyan;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            cursor: pointer;
+            margin: 20px 0;
+        }
+
+        .box button {
+            width: 350px;
+            height: 50px;
+            background-color: rgb(255, 217, 0);
+            border: none;
+            border-radius: 9px;
+            font-size: 25px;
+            color: white;
+            transition: background 0.3s ease;
+        }
+
+        .box button:hover {
+            background-color: red;
+            box-shadow: 0 0 20px rgba(255, 98, 0, 0.7);
+            transform: scale(1.05);
+        }
+
+        section {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+.swiper {
+  width: 950px;
+}
+
+/* Adjust card styles for vertical layout */
+.container {
+  border-radius: 20px;
+  margin-top: 100px;
+  width: 80%; /* Adjust the width as needed */
+}
+
+.card {
+  background: #000;
+  border: 3px solid #0ef;
+  border-radius: 20px;
+  margin-bottom: 10px; /* Adjusted margin */
+  padding: 20px;
+  width: calc(33.33% - 40px); /* Adjusted width for three cards in a row */
+  margin-right: 20px; /* Adjusted margin for spacing between cards */
+  display: inline-block; /* Display cards in a row */
+  vertical-align: top; /* Align cards to the top */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.card:nth-child(3n) {
+  margin-right: 0; /* Remove margin for the last card in each row */
+}
+
+.card .image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .info {
+  color: white; /* Set default color for other attributes */
+}
+
+.card .gym-name {
+  margin-bottom: 10px;
+  color: #FFDF00 !important; /* Set color for gym name */
+  font-size: 24px; /* Increase font size */
+}
+
+
+.card .info p strong {
+  color: #00FFFF; /* Set color for attribute names */
+}
+
+.card .info p {
+  color: white; /* Set color for attribute values */
+}
+
+.card .info p:not(:last-child) strong {
+  margin-right: 10px; /* Add space between attribute names and values */
+}
+        .rate-button {
+            align-items: center;
+            background-color: cyan;
+            color:black;
+            border: none;
+            margin-bottom:200px;
+            margin-left:700px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            padding: 10px 20px;
+            font-size:22px;
+            font-weight: bold;
+            cursor: pointer;
+            width:350px;
+            height:60px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .rate-button:hover {
+            background-color: #00bcd4; /* Change color on hover if needed */
+        }
+
+        /* Add responsive styles */
+        @media screen and (max-width: 768px) {
+            .box button {
+                margin-left: 10%; /* Adjusted margin */
+                width: 80%; /* Adjusted width */
+            }
+
+            .main .box nav {
+                margin-left: 20%; /* Adjusted margin */
+            }
+
+            .slctcity select {
+                margin-left: 20%; /* Adjusted margin */
+                width: 80%; /* Adjusted width */
+            }
+
+            .rate-button {
+                margin-left: 10%; /* Adjusted margin */
+                width: 80%; /* Adjusted width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="logo">
+            <img src="logo.png" alt="logo.png">
+        </div>
+
+        <div class="box">
+            <nav>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="mzp1.html">About</a></li>
+                  <li><a href="contact us.html">Contact</a></li>
+                  <li><a href="#">Community</a></li>
+                  <li><a href="#">Services</a></li>
+                </ul>
+            </nav>
+
+            <div class="slctcity">
+                <select id="selectedLocation">
+                    <option value="NERUL">NERUL</option>
+                    <option value="SEAWOODS">SEAWOODS</option>
+                    <option value="BELAPUR">BELAPUR</option>
+                    <option value="KHARGHAR">KHARGHAR</option>
+                    <option value="MANSAROVAR">MANSAROVAR</option>
+                </select>
+            </div>
+            <button onclick="searchGyms()">CLICK HERE TO SEARCH</button>
+        </div>
+        <section>
+            <div class="container">
+                <div class="content">
+                    <!-- Dynamic gym cards will be inserted here -->
+                </div>
+            </div>
+        </section>
+        <!-- Added rate button -->
+        <button id="openFeedbackForm" class="rate-button">Take a Moment to Rate us</button>
+    </div>
+  
+    <script>
+        function openFeedbackForm() {
+            window.location.href = "feedback.html";
+        }
+
+        // Adding event listener to the button
+        document.getElementById("openFeedbackForm").addEventListener("click", openFeedbackForm);
+
+        function saveGym() {
+    // Retrieve form inputs
+    const gymName = document.getElementById('gymName').value.trim();
+    const gymLocation = document.getElementById('gymLocation').value.trim();
+    const gymAddress = document.getElementById('gymAddress').value.trim();
+    const gymPrice = document.getElementById('gymPrice').value.trim();
+    const gymContactNumber = document.getElementById('gymContactNumber').value.trim();
+    const gymInfo = document.getElementById('gymInfo').value.trim();
+    const gymImage = document.getElementById('gymImage').files[0]; // Retrieve the uploaded image file
+
+    // Reset error messages
+    document.querySelectorAll('.error-message').forEach(element => {
+        element.textContent = '';
+    });
+
+    // Client-side validation
+    let isValid = true;  
+
+//     // // Validation for gym name
+//     const gymNameError = document.getElementById('gymNameError');
+//  array.forEach(element => {
+//        if (gymName === '') {
+//            gymNameError.textContent = 'Please enter gym name.';
+//            isValid = false;
+//        } else if (!/^[a-zA-Z\s]*$/.test(gymName)) {
+//            gymNameError.textContent = 'Gym name should not contain any numbers.';
+//            isValid = false;
+//        }
+   
+//        // // Validation for gym price
+//        const gymPriceError = document.getElementById('gymPriceError');
+//        if (gymPrice === '') {
+//            gymPriceError.textContent = 'Please enter gym price.';
+//            isValid = false;
+//        } else if (!/^\d{1,5}$/.test(gymPrice)) {
+//            gymPriceError.textContent = 'Price should be maximum 5 digits.';
+//            isValid = false;
+//        }
+   
+//        // // Validation for gym contact number
+//        const gymContactNumberError = document.getElementById('gymContactNumberError');
+//        if (gymContactNumber === '') {
+//            gymContactNumberError.textContent = 'Please enter gym contact number.';
+//            isValid = false;
+//        } else if (!/^\d{10}$/.test(gymContactNumber)) {
+//            gymContactNumberError.textContent = 'Gym contact number should be 10 digits only.';
+//            isValid = false;
+//        }
+   
+//        // // Validation for gym address
+//        const gymAddressError = document.getElementById('gymAddressError');
+//        if (gymAddress.length > 300) {
+//            gymAddressError.textContent = 'Address should not exceed 300 characters.';
+//            isValid = false;
+//        }
+   
+//        // // Validation for gym info
+//        const gymInfoError = document.getElementById('gymInfoError');
+//        if (gymInfo.length > 300) {
+//            gymInfoError.textContent = 'Information should not exceed 300 characters.';
+//            isValid = false;
+//        }
+   
+//        // If all client-side validations pass, proceed with form submission
+//  });
+      if (isValid) {
+        // Prepare form data
+        const formData = new FormData();
+        formData.append('gymName', gymName);
+        formData.append('gymLocation', gymLocation);
+        formData.append('gymAddress', gymAddress);
+        formData.append('gymPrice', gymPrice);
+        formData.append('gymContactNumber', gymContactNumber);
+        formData.append('gymInfo', gymInfo);
+        formData.append('gymImage', gymImage);
+
+        // Make a simple AJAX request to save gym data
+        fetch('savegym.php', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            console.log('Response Status:', response.status);
+            return response.json(); // Parse response as JSON
+        })
+        .then(data => {
+            console.log('Raw Response:', data);
+
+            // Display server-side validation errors if present
+            if (data.errors) {
+                console.error('Server-side validation errors:');
+                for (const key in data.errors) {
+                    if (data.errors.hasOwnProperty(key)) {
+                        console.error(`${key}: ${data.errors[key]}`);
+                        // Display error messages in the respective error message elements on the page
+                        const errorMessageElement = document.getElementById(`${key}Error`);
+                        if (errorMessageElement) {
+                            errorMessageElement.textContent = data.errors[key];
+                        }
+                    }
+                }
+            } else if (data.status === 200) {
+                alert('Gym data saved successfully!');
+            } else {
+                alert('Error saving gym data. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error making the network request:', error);
+            alert('An unexpected error occurred. Please try again later.');
+        });
+    }
+    }
+
+
+
+    
+function searchGyms() {
+    const location = document.getElementById('selectedLocation').value;
+
+    fetch(`get_gyms.php?location=${location}`)
+        .then(response => response.json())
+        .then(gyms => {
+            const gymsContainer = document.querySelector('.content');
+            gymsContainer.innerHTML = ''; // Clear previous results
+
+            gyms.forEach(gym => {
+                const gymCard = document.createElement('div');
+                gymCard.className = 'card'; // Assign class for styling
+                gymCard.innerHTML = `
+                    <h3 class="gym-name">${gym.name}</h3>
+                    <div class="image">
+                        <img src="${gym.image}" alt="${gym.name} Image">
+                    </div>
+                    <p><strong>Location:</strong> ${gym.location}</p>
+                    <p><strong>Address:</strong> ${gym.address}</p>
+                    <p><strong>Price:</strong> ${gym.price}</p>
+                    <p><strong>Contact Number:</strong> ${gym.contact_number}</p>
+                    <p>${gym.info}</p>
+                `;
+                gymsContainer.appendChild(gymCard);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching gyms:', error);
+            alert('Error fetching gyms. Please try again.');
+        });
+}
+
+
+
+
+    
+function searchGyms() {
+    const location = document.getElementById('selectedLocation').value;
+
+    fetch(`get_gyms.php?location=${location}`)
+        .then(response => response.json())
+        .then(gyms => {
+            const gymsContainer = document.querySelector('.content');
+            gymsContainer.innerHTML = ''; // Clear previous results
+
+            gyms.forEach(gym => {
+                const gymCard = document.createElement('div');
+                gymCard.className = 'card'; // Assign class for styling
+                gymCard.innerHTML = `
+                    <h3 class="gym-name">${gym.name}</h3>
+                    <div class="image">
+                        <img src="${gym.image}" alt="${gym.name} Image">
+                    </div>
+                    <p><strong>Location:</strong> ${gym.location}</p>
+                    <p><strong>Address:</strong> ${gym.address}</p>
+                    <p><strong>Price:</strong> ${gym.price}</p>
+                    <p><strong>Contact Number:</strong> ${gym.contact_number}</p>
+                    <p>${gym.info}</p>
+                `;
+                gymsContainer.appendChild(gymCard);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching gyms:', error);
+            alert('Error fetching gyms. Please try again.');
+        });
+}
+
+function openFeedbackForm() {
+    // Redirecting to the feedback form page
+    window.location.href = "feedback.html";
+}
+
+// Adding event listener to the button
+document.getElementById("openFeedbackFormButton").addEventListener("click", openFeedbackForm);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

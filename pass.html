@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym Registration Form</title>
+<link rel="stylesheet" type="text/css" href="pass.css">
+</head>
+<body>
+<div class="container">
+  <h2>User Registration Form</h2>
+  <form id="registrationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required placeholder="Format: 1234567890">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="gender" style="margin-bottom: 0;">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <input type="submit" value="Submit">
+    <button type="button" onclick="redirectToLogin()">Back to Login</button>
+  </form>
+</div>
+<script>
+  function redirectToLogin() {
+    window.location.href = "login.html"; // Redirect to login page
+  }
+
+  document.getElementById("registrationForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+
+    // Validating name
+    const name = formData.get('name');
+    if (name.trim() === '') {
+      alert('Please enter your name');
+      return;
+    }
+
+    // Validating email
+    const email = formData.get('email');
+    if (!isValidEmail(email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+
+    // Validating phone number
+    const phone = formData.get('phone');
+    if (!isValidPhone(phone)) {
+      alert('Please enter a valid phone number');
+      return;
+    }
+
+    // Validating password (minimum length of 6 characters)
+    const password = formData.get('password');
+    if (password.length < 6) {
+      alert('Password must be at least 6 characters long');
+      return;
+    }
+
+    // Function to validate email format
+    function isValidEmail(email) {
+      const re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    }
+
+    // Function to validate phone number format
+    function isValidPhone(phone) {
+      const re = /^\d{10}$/;
+      return re.test(phone);
+    }
+
+    // Store data in localStorage
+    localStorage.setItem('name', name);
+    localStorage.setItem('email', email);
+    localStorage.setItem('phone', phone);
+    localStorage.setItem('gender', formData.get('gender'));
+
+    fetch('write.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();
+    })
+    .then(data => {
+        alert('Registration Successful');
+        window.location.href = "select_gym.html"; // Redirect to select_gym.html after successful registration
+    })
+    .catch(error => {
+        console.error('There was a problem with your fetch operation:', error);
+    });
+  });
+</script>
+</body>
+</html>

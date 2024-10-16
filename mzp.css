@@ -1,0 +1,187 @@
+footer {
+  background-color: black;
+  width: 100%;
+  height: 42vh;
+  color: rgb(176, 176, 176);
+  border-top: 2px solid red;
+  background-image: url("gym2.jpg");
+}
+body{
+  background-color: rgb(0, 0, 0);
+}
+canvas {
+  border: 1px solid black;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3px 30px;
+}
+
+.container a {
+  text-decoration: none;
+  color: white;
+}
+
+.container a:hover {
+  color: rgb(0, 255, 60);
+}
+
+.container h4 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.contact {
+  height: 40px;
+  width: 30vw;
+  margin-left: 20px;
+}
+
+.contact p {
+  padding-top: 15px;
+}
+
+.contact h3,
+h5 {
+  color: white;
+}
+
+.contact pre {
+  color: white;
+}
+
+.academics {
+  height: 40px;
+  width: 20vw;
+}
+
+.academics h4 {
+  color: aqua;
+}
+
+.academics a {
+  display: block;
+  margin-bottom: 1px;
+}
+
+.connect {
+  height: 40px;
+  width: 20vw;
+}
+
+.connect h4 {
+  color: aqua;
+}
+
+.connect a {
+  display: block;
+  margin-bottom: 1px;
+}
+
+.connect a i {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.icon_inline {
+  display: none;
+}
+
+.face:hover i {
+  color: #8ab4f8;
+}
+
+.twitter :hover i {
+  color: #548eeb;
+}
+
+.you:hover i {
+  color: #d70022;
+}
+
+.insta:hover i {
+  color: rgb(252, 86, 114);
+}
+
+.linked:hover i {
+  color: #8ab4f8;
+}
+
+.contact h4 {
+  color: aqua;
+}
+
+.map {
+  height: 40px;
+  width: 10px;
+}
+
+.map pre iframe {
+  display: block;
+  padding-top: 9px;
+  margin-left: -50px;
+  margin-top: -10px;
+}
+
+.footer2 {
+  height: 50px;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: wrap;
+  border-top: 2px solid yellow;
+}
+
+.footer2 p {
+  box-sizing: border-box;
+}
+
+.footer2 i {
+  color: red;
+}
+
+.video-container{
+    position: relative;
+    margin-top: 100px;
+    margin-left:230px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+video {
+  justify-content: center;
+  align-content: center;
+  height:350px;
+  width:600px;
+  margin-left: 220px;
+}
+
+.subtitle {
+  position: absolute;
+  bottom: 30px;
+  left: 40%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  display: none;
+}
+
+canvas {
+  border: 2px solid #000000;
+  left:30%;
+  margin-left: 550px;
+}

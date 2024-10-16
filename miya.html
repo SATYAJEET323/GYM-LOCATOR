@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIN</title>
+    <style>
+        /* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  background-image: url(allbg.png);
+  /* background-color: white; */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Container Styles */
+
+.main_pg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.txt_pg {
+  text-align: center;
+}
+
+/* Button Styles */
+
+.ubtn {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #ffff00;
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.gbtn {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #00ffff;
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tbtn {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #00ffff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Text Styles */
+
+h1 {
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #abff0f;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  .bg {
+    padding: 10px;
+  }
+  .ubtn, .gbtn, .tbtn {
+    padding: 8px 16px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bg {
+    padding: 5px;
+  }
+  .ubtn, .gbtn, .tbtn {
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="main_pg">
+        <div class="bg">
+            <div class="txt_pg">
+                <h1>Who Are You?</h1>
+                <div class="ubtn">
+                    <a href= "pass.html" class="button">USER</a>
+                </div>
+                <h2>OR</h2>
+                <div class="gbtn">
+                    <a href= "gymregistration.html" class="button1">GYM MANAGER</a>
+                </div>
+               <!--- <div class="tbtn">
+                    <button>TRAINER</button>
+                </div>
+            -->
+            </div>   
+        </div>
+    </div>
+</body>
+</html>

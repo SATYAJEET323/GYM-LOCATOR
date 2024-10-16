@@ -1,0 +1,226 @@
+<style>
+* {
+margin: 0px;
+padding: 0px;
+}
+
+body {
+display: flex;
+background-image: url("img3.png");
+background-size: 100%;
+color: azure;
+}
+
+.logo img {
+margin-top: 20px;
+margin-left: 20px;
+width: 200px;
+height: 50px;
+filter: drop-shadow(0 0 9px white);
+}
+
+.box {
+position: relative;
+margin-top: 0px;
+margin-left: 0px;
+margin-bottom: 20px; /* Adjusted margin */
+}
+
+.box button {
+margin-top: 10px; /* Adjusted margin */
+margin-left: 920px;
+width: 350px;
+height: 50px;
+background-color: rgb(255, 98, 0);
+border: none;
+border-radius: 9px;
+font-size: 25px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+color: white;
+}
+
+.box button:hover {
+border-left: 5px solid whitesmoke;
+border-right: 5px solid whitesmoke;
+border-radius: 10px;
+background-color: red;
+width: 310px;
+height: 60px;
+margin-left: 930px;
+margin-top: 10px; /* Adjusted margin */
+box-shadow: 0 0 20px rgb(255, 98, 0), 0 0 25px rgb(255, 98, 0), 0 0 50px rgb(255, 98, 30), 0 0 100px rgb(255, 98, 0);
+transition: .9s;
+}
+
+.main .box nav {
+margin-top: 0px;
+margin-left: 800px;
+filter: drop-shadow(0 0 9px rgb(234, 87, 43));
+}
+
+ul {
+display: flex;
+}
+
+ul li a {
+margin-inline: 40px;
+font-size: 20px;
+}
+
+ul li a:hover {
+border-bottom: 4px solid rgb(255, 0, 0);
+border-radius: 2px;
+}
+
+::-webkit-scrollbar {
+display: none;
+}
+
+.slctcity select {
+margin-top: 150px;
+margin-left: 900px;
+width: 400px;
+height: 60px;
+font-size: 20px;
+color: cyan;
+font-weight: bold;
+font-family: Georgia, 'Times New Roman', Times, serif;
+background-color: black;
+border-radius: 10px;
+padding: 10px;
+box-shadow: (0 0 20, red);
+justify-content: center;
+align-items: center;
+display: flex;
+cursor: pointer;
+}
+
+.slctcity .option {
+padding: 20px;
+font-size: 18Px;
+height: 500px;
+cursor: pointer;
+}
+
+.slctcity .option option {
+padding: 20px;
+height: 60PX;
+}
+
+section {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 20px; /* Adjusted margin */
+margin-left: 0;
+}
+
+.swiper {
+width: 950px;
+}
+
+/* Adjust card styles for vertical layout */
+.container {
+border-radius: 20px;
+margin-top: 100px;
+width: 80%; /* Adjust the width as needed */
+}
+
+.card {
+background: #000;
+border: 3px solid #0ef;
+border-radius: 20px;
+margin-bottom: 10px; /* Adjusted margin */
+padding: 20px;
+width: calc(33.33% - 40px); /* Adjusted width for three cards in a row */
+margin-right: 20px; /* Adjusted margin for spacing between cards */
+display: inline-block; /* Display cards in a row */
+vertical-align: top; /* Align cards to the top */
+box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.card:nth-child(3n) {
+margin-right: 0; /* Remove margin for the last card in each row */
+}
+
+.card .image {
+width: 100%;
+height: auto;
+border-radius: 10px;
+overflow: hidden;
+margin-bottom: 10px;
+}
+
+.card .image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.card .info {
+color: white; /* Set default color for other attributes */
+}
+
+.card .gym-name {
+margin-bottom: 10px;
+color: #FFDF00 !important; /* Set color for gym name */
+font-size: 24px; /* Increase font size */
+}
+
+
+.card .info p strong {
+color: #00FFFF; /* Set color for attribute names */
+}
+
+.card .info p {
+color: white; /* Set color for attribute values */
+}
+
+.card .info p:not(:last-child) strong {
+margin-right: 10px; /* Add space between attribute names and values */
+}
+.rate-button {
+    align-items: center;
+    background-color: cyan;
+    color:black;
+    border: none;
+    margin-bottom:200px;
+    margin-left:700px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 10px 20px;
+    font-size:22px;
+    font-weight: bold;
+    cursor: pointer;
+    width:350px;
+    height:60px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.rate-button:hover {
+    background-color: #00bcd4; /* Change color on hover if needed */
+}
+
+/* Add responsive styles */
+@media screen and (max-width: 768px) {
+    .box button {
+        margin-left: 10%; /* Adjusted margin */
+        width: 80%; /* Adjusted width */
+    }
+
+    .main .box nav {
+        margin-left: 20%; /* Adjusted margin */
+    }
+
+    .slctcity select {
+        margin-left: 20%; /* Adjusted margin */
+        width: 80%; /* Adjusted width */
+    }
+
+    .rate-button {
+        margin-left: 10%; /* Adjusted margin */
+        width: 80%; /* Adjusted width */
+    }
+}
+</style>
