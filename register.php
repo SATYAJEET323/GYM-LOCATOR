@@ -44,7 +44,7 @@ if (count($errors) > 0) {
     // No validation errors, proceed with database insertion
     $name = $conn->real_escape_string($_POST['name']);
     $email = $conn->real_escape_string($_POST['email']);
-    $password = password_hash($conn->real_escape_string($_POST['password']), PASSWORD_BCRYPT);
+    $password = $conn->real_escape_string($_POST['password']);
     $gender = $conn->real_escape_string($_POST['gender']);
 
     // SQL to insert data into user table
