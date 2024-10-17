@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym's Login Form</title>
     <link rel="stylesheet" href="techstyle.css">
 </head>
-
 <body>
     <div class="container">
         <div class="form-box">
@@ -16,18 +14,17 @@
                 <p id="result"></p>
                 <div class="input-box">
                     <i class='bx bx-envelope'></i>
-                    <input type="email" name="email" placeholder="Email">
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="input-box">
                     <i class='bx bxs-lock-alt'></i>
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
                 <div class="cat">
                     <div id="captcha"></div>
                     <input type="text" id="captchaInput" name="captcha" placeholder="Enter CAPTCHA">
                     <p id="validationMessage"></p>
                 </div>
-
                 <div class="button">
                     <button type="submit" class="btn">LOGIN</button>
                 </div>
@@ -40,62 +37,61 @@
     <script>
         function validateForm() {
             const emailInput = document.forms["FormFill"]["email"];
-    const passwordInput = document.forms["FormFill"]["password"];
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
-    const captchaInput = document.getElementById('captchaInput').value.trim();
-    const captchaGenerated = document.getElementById('captcha').textContent.trim();
-    const validationMessage = document.getElementById('validationMessage');
+            const passwordInput = document.forms["FormFill"]["password"];
+            const email = emailInput.value.trim();
+            const password = passwordInput.value.trim();
+            const captchaInput = document.getElementById('captchaInput').value.trim();
+            const captchaGenerated = document.getElementById('captcha').textContent.trim();
+            const validationMessage = document.getElementById('validationMessage');
 
-    if (email === '') {
-        emailInput.setCustomValidity('Email address is required');
-    } else if (!/@/.test(email)) {
-        emailInput.setCustomValidity('Email address must contain "@"');
-    } else if (!/.com$/.test(email.toLowerCase())) {
-        emailInput.setCustomValidity('Email address must end with ".com"');
-    } else if (!/[a-zA-Z]/.test(email) || !/\d/.test(email)) {
-        emailInput.setCustomValidity('Email address must contain both string and integer characters');
-    } else if (!validateEmail(email)) {
-        emailInput.setCustomValidity('Invalid email address');
-    } else if (password === '') {
-        passwordInput.setCustomValidity('Password is required');
-    } else if (password.length < 8) {
-        passwordInput.setCustomValidity('Password must be at least 8 characters long');
-    } else if (!/\d/.test(password) || !/[a-zA-Z]/.test(password)) {
-        passwordInput.setCustomValidity('Password must contain both letters and numbers');
-    } else if (captchaInput === '') {
-        validationMessage.textContent = "CAPTCHA is required";
-        validationMessage.style.color = "red";
-        return false;
-    } else if (captchaInput !== captchaGenerated) {
-        validationMessage.textContent = "CAPTCHA is incorrect. Please try again.";
-        validationMessage.style.color = "red";
-        generateCaptcha();
-        return false;
-    } else {
-        emailInput.setCustomValidity('');
-        passwordInput.setCustomValidity('');
-        validationMessage.textContent = "Form submitted successfully!";
-        validationMessage.style.color = "green";
-        return true;
-    }
+            if (email === '') {
+                emailInput.setCustomValidity('Email address is required');
+            } else if (!/@/.test(email)) {
+                emailInput.setCustomValidity('Email address must contain "@"');
+            } else if (!/.com$/.test(email.toLowerCase())) {
+                emailInput.setCustomValidity('Email address must end with ".com"');
+            } else if (!/[a-zA-Z]/.test(email) || !/\d/.test(email)) {
+                emailInput.setCustomValidity('Email address must contain both string and integer characters');
+            } else if (!validateEmail(email)) {
+                emailInput.setCustomValidity('Invalid email address');
+            } else if (password === '') {
+                passwordInput.setCustomValidity('Password is required');
+            } else if (password.length < 8) {
+                passwordInput.setCustomValidity('Password must be at least 8 characters long');
+            } else if (!/\d/.test(password) || !/[a-zA-Z]/.test(password)) {
+                passwordInput.setCustomValidity('Password must contain both letters and numbers');
+            } else if (captchaInput === '') {
+                validationMessage.textContent = "CAPTCHA is required";
+                validationMessage.style.color = "red";
+                return false;
+            } else if (captchaInput !== captchaGenerated) {
+                validationMessage.textContent = "CAPTCHA is incorrect. Please try again.";
+                validationMessage.style.color = "red";
+                generateCaptcha();
+                return false;
+            } else {
+                emailInput.setCustomValidity('');
+                passwordInput.setCustomValidity('');
+                validationMessage.textContent = "Form submitted successfully!";
+                validationMessage.style.color = "green";
+                return true;
+            }
 
-    return false;
+            return false;
         }
 
         function generateCaptcha() {
             var chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var captcha = '';
-    for (var i = 0; i < 6; i++) {
-        var randomIndex = Math.floor(Math.random() * chars.length);
-        captcha += chars[randomIndex];
-    }
-    var captchaElement = document.getElementById('captcha');
-    captchaElement.textContent = captcha;
+            var captcha = '';
+            for (var i = 0; i < 6; i++) {
+                var randomIndex = Math.floor(Math.random() * chars.length);
+                captcha += chars[randomIndex];
+            }
+            var captchaElement = document.getElementById('captcha');
+            captchaElement.textContent = captcha;
         }
 
         generateCaptcha();
     </script>
 </body>
-
 </html>
