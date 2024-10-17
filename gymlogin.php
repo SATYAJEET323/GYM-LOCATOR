@@ -1,43 +1,41 @@
 <?php
-// Establish database connection
+// Start the session
+session_start();
+
+// Database connection parameters
 $servername = "localhost";
-$username = "root"; // Replace with your MySQL username
-$password = ""; // Replace with your MySQL password
+$username = "root"; // replace with your database username if different
+$password = ""; // replace with your database password if any
 $dbname = "gymspy";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+// Check the connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve user input and escape special characters
-    $email = $conn->real_escape_string($_POST['email']);
-    $password = $conn->real_escape_string($_POST['password']);
-    
-    // Perform user authentication using prepared statements
-    $stmt = $conn->prepare("SELECT * FROM project WHERE email = ? AND pass = ?");
-    $stmt->bind_param("ss", $email, $password);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    // Get email and password from form
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Prepare and execute SQL query to check user credentials
+    $sql = "SELECT * FROM user WHERE email = '$email' AND password = '$password'";
+    $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // User exists, proceed with login
-        header("Location: gyminfo.html"); // Redirect to logged-in page
-        exit(); // Always use exit after header redirection
+        // Login successful
+        $_SESSION['email'] = $email;
+        echo "<script>alert('Login successful!'); window.location.href = 'gyminfo.html';</script>";
     } else {
-        // User not registered, display alert message
-        echo '<script>alert("You need to register first");</script>';
+        // Invalid credentials
+        echo "<script>alert('Invalid email or password. Please try again.'); window.location.href = 'gymlogin.html';</script>";
     }
-
-    // Close the statement
-    $stmt->close();
 }
 
-// Close database connection
+// Close the database connection
 $conn->close();
 ?>
